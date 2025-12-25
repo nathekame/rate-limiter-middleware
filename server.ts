@@ -1,17 +1,10 @@
 import express from 'express';
+import router from './routes/api';
 
 
-const app = express();
-const router = app.router
+const app = express()
 
-
-router.get('/', (req, res) => {
-
-  res.send('Hello rate limiter');
-
-})
-
-
+app.use(router)
 
 app.listen(8000, () => {
     console.log('Server is listening on port 8000');
