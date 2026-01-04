@@ -194,6 +194,7 @@ router.post('/api/submit', rateCheck, yourController);
 // Or apply to all routes
 router.use(rateCheck);
 
+```
 
 ## Advanced Features to Add
 
