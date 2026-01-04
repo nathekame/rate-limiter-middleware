@@ -198,7 +198,7 @@ router.use(rateCheck);
 
 ## Advanced Features to Add
 
-This is a basic implementation. Consider adding:
+This is a basic implementation. We can consider adding:
 
 - **Sliding Window** - More accurate rate limiting
 - **Distributed Rate Limiting** - For multiple servers
