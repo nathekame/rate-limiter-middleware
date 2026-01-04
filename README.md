@@ -193,28 +193,7 @@ router.post('/api/submit', rateCheck, yourController);
 
 // Or apply to all routes
 router.use(rateCheck);
-```
 
-## Customization Options
-
-### Different Limits for Different Routes
-
-```typescript
-// Create custom rate limiters
-const strictRateLimit = createRateLimiter(5, 60);    // 5 req/min
-const relaxedRateLimit = createRateLimiter(100, 60); // 100 req/min
-
-router.post('/api/auth/login', strictRateLimit, loginController);
-router.get('/api/public/data', relaxedRateLimit, dataController);
-```
-
-### User-Based Rate Limiting
-
-Modify the key to use user ID instead of IP:
-
-```typescript
-const key = `rate_limit:user:${req.user.id}`;
-```
 
 ## Advanced Features to Add
 
